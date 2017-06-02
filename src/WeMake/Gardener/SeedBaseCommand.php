@@ -39,6 +39,6 @@ class SeedBaseCommand extends Command
      */
     protected function getSeedsPath()
     {
-        return $this->laravel->databasePath(config('seeds.directory'));
+        return $this->laravel->databasePath(config('gardener.directory'));
     }
 }

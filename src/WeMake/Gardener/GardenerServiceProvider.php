@@ -26,7 +26,7 @@ class GardenerServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../../config/seeds.php' => config_path('seeds.php'),
+            __DIR__ . '/../../config/gardener.php' => config_path('gardener.php'),
         ]);
     }
 
@@ -38,11 +38,11 @@ class GardenerServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/../../config/seeds.php', 'seeds'
+            __DIR__ . '/../../config/gardener.php', 'gardener'
         );
 
         $this->app->singleton('seed.repository', function ($app) {
-            return new GardenerRepository($app['db'], config('seeds.table'));
+            return new GardenerRepository($app['db'], config('gardener.table'));
         });
 
         $this->app->singleton('seed.migrator', function ($app) {

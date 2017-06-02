@@ -61,7 +61,7 @@ class SeedRollbackCommand extends SeedBaseCommand
 
         $this->migrator->setConnection($this->input->getOption('database'));
 
-        if (File::exists(database_path(config('seeds.directory')))) {
+        if (File::exists(database_path(config('gardener.directory')))) {
             $this->migrator->setEnv($this->option('env'));
         }
 

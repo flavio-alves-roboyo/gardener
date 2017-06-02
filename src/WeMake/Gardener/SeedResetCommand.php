@@ -61,7 +61,7 @@ class SeedResetCommand extends SeedBaseCommand
 
         $this->prepareDatabase();
 
-        if (File::exists(database_path(config('seeds.directory')))) {
+        if (File::exists(database_path(config('gardener.directory')))) {
             $this->migrator->setEnv($this->option('env'));
         }
 
