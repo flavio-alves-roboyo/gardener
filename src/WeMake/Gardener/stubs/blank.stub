@@ -1,0 +1,29 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+
+/**
+ * Class {{class}}
+ */
+class {{class}} extends Migration
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        //
+    }
+
+    /**
+     * Reverse the database seeds.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        //
+    }
+}

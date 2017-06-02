@@ -1,0 +1,12 @@
+# Crap
+.DS_Store
+coverage
+
+# Composer
+composer.phar
+composer.lock
+vendor
+
+# IDE
+.idea
+*.sublime-*
