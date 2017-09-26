@@ -17,7 +17,7 @@ class GardenerBaseSeeder extends Migration
      * @param string $table
      * @param bool   $enableIdentityInsert
      */
-    protected function insert(array $data, $table, $enableIdentityInsert = true)
+    protected function insert(array $data, $table, $enableIdentityInsert = false)
     {
         if ($enableIdentityInsert) {
             $this->enableIdentityInsert($table);
