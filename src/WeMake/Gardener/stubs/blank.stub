@@ -1,11 +1,11 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
+use WeMake\Gardener\GardenerBaseSeeder;
 
 /**
  * Class {{class}}
  */
-class {{class}} extends Migration
+class {{class}} extends GardenerBaseSeeder
 {
     /**
      * Run the database seeds.
