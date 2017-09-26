@@ -13,6 +13,24 @@ use Illuminate\Support\Facades\DB;
 class GardenerBaseSeeder extends Migration
 {
     /**
+     * @param array  $data
+     * @param string $table
+     * @param bool   $enableIdentityInsert
+     */
+    protected function insert(array $data, $table, $enableIdentityInsert = true)
+    {
+        if ($enableIdentityInsert) {
+            $this->enableIdentityInsert($table);
+        }
+
+        DB::table($table)->insert($data);
+
+        if ($enableIdentityInsert) {
+            $this->disableIdentityInsert($table);
+        }
+    }
+
+    /**
      * @param string $table
      */
     protected function enableIdentityInsert($table)
