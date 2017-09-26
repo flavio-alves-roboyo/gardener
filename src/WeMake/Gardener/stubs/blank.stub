@@ -12,7 +12,7 @@ class {{class}} extends GardenerBaseSeeder
      *
      * @return void
      */
-    public function run()
+    public function up()
     {
         //
     }
