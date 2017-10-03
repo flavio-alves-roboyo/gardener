@@ -11,7 +11,7 @@ return [
     | this references the actual table in your database
     |
     */
-    'table'     => env('GARDENER_TABLE', 'gardener'),
+    'table'     => env('GARDENER_TABLE', 'seeds'),
 
     /*
     |--------------------------------------------------------------------------
@@ -21,6 +21,6 @@ return [
     | This option controls the default seeds folder
     |
     */
-    'directory' => env('GARDENER_DIRECTORY', 'gardener'),
+    'directory' => env('GARDENER_DIRECTORY', 'seeds'),
 
 ];

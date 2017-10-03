@@ -101,7 +101,9 @@ class SeedMakeCommand extends SeedBaseCommand
      */
     protected function getMigrationPath()
     {
-        $targetPath = "{$this->laravel->databasePath()}/gardener";
+        $gardenerDirectory = config('gardener.directory');
+
+        $targetPath = "{$this->laravel->databasePath()}/$gardenerDirectory";
 
         if ( ! is_null($path = $this->input->getOption('path'))) {
             $targetPath .= "{$this->laravel->basePath()}/$path";
