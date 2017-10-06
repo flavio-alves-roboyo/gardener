@@ -50,7 +50,7 @@ class SeedInstallCommand extends Command
      *
      * @return mixed
      */
-    public function fire()
+    public function handle()
     {
         $this->repository->setSource($this->input->getOption('database'));
 
